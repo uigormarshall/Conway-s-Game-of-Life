@@ -46,7 +46,7 @@ export class Render {
         }
     }
 
-    born(row: any, column: any) {
+    born(row: number, column: number) {
         this.matrix.born(row, column)
         const id = `${row}-${column}`;
         let cell = document.getElementById(id);
