@@ -1,3 +1,14 @@
 {
-    "public": true
-  }
+    "public": true,
+    "headers": [
+        {
+          "source": "/.well-known/amphtml/apikey.pub",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ]
+        }
+      ]
+}
