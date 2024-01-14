@@ -26,7 +26,7 @@ export default {
   },
   mounted() {
     const rule = new GameOfLifeRule();
-   const game = new Game('Game Of Life', 5 ,rule);
+   const game = new Game('Game Of Life', 3 ,rule);
    game.run();
  
   },

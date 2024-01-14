@@ -31,7 +31,7 @@ export default {
   },
   mounted() {
    const rule = new MazeRule();
-   const game = new Game('Game Of Life: Maze', 10 ,rule);
+   const game = new Game('Game Of Life: Maze', 3 ,rule);
    game.run();
  
   },
