@@ -1,8 +1,7 @@
-import './style.css'
-import { Game } from './game';
-import { GameOfLifeRule } from './rules/game-of-life.rule';
+import { createApp } from 'vue';
+import App from './App.vue';
+import router from './router';
 
-const gameOfLifeRule = new GameOfLifeRule();
-const game = new Game('game of life', 5, gameOfLifeRule);
-
-game.run();
+const app = createApp(App);
+app.use(router);
+app.mount('#app');
