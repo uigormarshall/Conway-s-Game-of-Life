@@ -11,11 +11,8 @@ export class Game {
         this.rule = rule;
     }
 
-    run(){
-        const x = 90
-        const y = 35
+    run(x: number=60, y: number=30){
         const randomize = true;
-
         const render = new Render(x, y, randomize, this.rule);
         setInterval(render.nextGen.bind(render), 1000/this.fps);
     }
