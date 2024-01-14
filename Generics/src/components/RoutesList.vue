@@ -15,9 +15,14 @@
 <style scoped>
  p {
   color: #444d84 ; 
-  font-size: 14px;
+  font-size: 13px;
  }
  a {
   text-decoration: none;
  }
+ p:hover{
+  background-color: #444d84;
+  color:#b2d5d1;
+ }
+ 
 </style>

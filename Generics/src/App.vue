@@ -22,7 +22,7 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Tirhuta&family=Nunito+Sans:opsz,wght@6..12,300&family=Pixelify+Sans:wght@400;500;600;700&display=swap');
 body {
   background-color: #08001f ;
-  margin: 0;
+  margin: 0px 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -31,7 +31,7 @@ body {
   font-size: 20px;
 }
 div{
-  padding: 10px 10px;
+  padding: 5px 5px;
 }
 
 

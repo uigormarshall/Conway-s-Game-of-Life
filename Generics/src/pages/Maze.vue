@@ -32,7 +32,7 @@ export default {
   mounted() {
    const rule = new MazeRule();
    const game = new Game('Game Of Life: Maze', 3 ,rule);
-   game.run();
+   game.run(80,45);
  
   },
 };
