@@ -4,6 +4,12 @@ import { Matrix } from "./matrix";
 export class Render {
     matrix: Matrix;
     rule: IRule;
+
+    colors = {
+        live: '#b2d5d1 ',
+        death: '#08001f',
+        background: '#08001f'
+    }
     constructor(x: number, y: number, randomize: boolean, rule: IRule) {
         console.log("Iniciando Render")
         this.rule = rule;
@@ -21,7 +27,7 @@ export class Render {
                 const cell = document.createElement('td');
                 const id = `${matrix[row][column].id}`;
                 cell.id = id;
-                cell.style.backgroundColor = '#0a050f';
+                cell.style.backgroundColor = this.colors.background;
                 rowTd.appendChild(cell);
             }
             table.appendChild(rowTd);
@@ -40,9 +46,9 @@ export class Render {
                 let cell = document.getElementById(id);
                 if(cell){
                     if (nextGen[row][column].isLive == 1) {
-                        cell.style.backgroundColor = '#cc4f43';
+                        cell.style.backgroundColor = this.colors.live;
                     } else {
-                        cell.style.backgroundColor = '#0a050f';
+                        cell.style.backgroundColor = this.colors.death;
                     }
                 }
                 
@@ -55,6 +61,6 @@ export class Render {
         const id = `${row}-${column}`;
         let cell = document.getElementById(id);
         if(cell != null)
-         cell.style.backgroundColor = "#cc4f43";
+         cell.style.backgroundColor = this.colors.death;
     }
 }
