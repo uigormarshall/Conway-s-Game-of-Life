@@ -15,6 +15,7 @@
 <style scoped>
  p {
   color: #444d84 ; 
+  font-size: 14px;
  }
  a {
   text-decoration: none;

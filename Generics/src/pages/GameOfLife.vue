@@ -9,6 +9,7 @@
 </template>
 <style>
 td{
+  border: none;
   width: 2px; 
   height: 2px; 
 }
@@ -26,7 +27,7 @@ export default {
   },
   mounted() {
     const rule = new GameOfLifeRule();
-   const game = new Game('Game Of Life', 3 ,rule);
+    const game = new Game('Game Of Life', 2 ,rule);
    game.run();
  
   },
