@@ -1,8 +1,5 @@
 <template>
   <div id="app">
-    <header>
-      
-    </header>
     <router-view></router-view>
     <RoutesList></RoutesList>
   </div>
@@ -10,10 +7,14 @@
 
 <script>
 import RoutesList from './components/RoutesList.vue';
+import GameOfLife from './pages/GameOfLife.vue';
+import Maze from './pages/Maze.vue';
 export default {
   name: 'App',
   components: {
     RoutesList, 
+    GameOfLife,
+    Maze
   },
 };
 </script>
@@ -33,6 +34,4 @@ body {
 div{
   padding: 10px 10px;
 }
-
-
 </style>

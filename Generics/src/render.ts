@@ -15,7 +15,6 @@ export class Render {
         this.rule = rule;
         this.matrix = new Matrix(x, y, randomize, this.rule);
         this.generateCells(this.matrix.matrix);
-        
     }
 
     generateCells(matrix: string | any[]) {
@@ -51,7 +50,6 @@ export class Render {
                         cell.style.backgroundColor = this.colors.death;
                     }
                 }
-                
             }
         }
     }

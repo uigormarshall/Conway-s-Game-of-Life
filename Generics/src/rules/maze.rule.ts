@@ -2,9 +2,7 @@ import { IRule } from "../interfaces/irule";
 
 export class MazeRule implements IRule{
     name: string = "Maze";
-    apply(oldCell: any): void {
-        console.log(this.name + ': Aplicando Rules');
-        
+    apply(oldCell: any): void {    
         // Lógica específica do Maze
         if (oldCell.isLive) {
             // Célula viva

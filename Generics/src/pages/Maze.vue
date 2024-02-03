@@ -3,37 +3,43 @@
 
 <template>
     <div>
-        <table id="matrix">
+        <table class="maze" id="matrix" v-if="show">
         </table>
     </div>
 </template>
 <style>
-td{
-    border: none;
-    width: 2px; 
-    height: 2px; 
-    transition: background-color 2s ease;
-}
-table {
-    border-collapse: collapse;  
-}
-
+  .maze {
+      border: none;
+      border-collapse: collapse;  
+      td{
+        
+        width: 2px; 
+        height: 2px; 
+        transition: background-color 1.5s ease;
+      } 
+  }
 </style>
 <script>
 import { Game } from '../game';
-
 import { MazeRule } from '../rules/maze.rule';
+const rule = new MazeRule();
 export default {
   data() {
     return {
-      gameOfLife: null,
+      gameOfLife: new Game('Game Of Life: Maze', 6,rule),
+      show: true
     };
   },
   mounted() {
-   const rule = new MazeRule();
-   const game = new Game('Game Of Life: Maze', 3 ,rule);
-   game.run();
+   
+   this.gameOfLife.run();
  
+  },
+  beforeRouteLeave(to, from, next) {
+    // Lógica para desabilitar o componente ao sair da rota
+    this.gameOfLife.stop();
+    this.show = false;
+    next();
   },
 };
 </script>
