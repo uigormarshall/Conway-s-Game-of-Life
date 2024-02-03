@@ -1,5 +1,3 @@
-<script setup lang="ts">
-</script>
 
 <template>
   <div>
@@ -41,7 +39,7 @@ ul:hover router-link {
 </style>
 
 <script>
-import { ref, computed } from 'vue';
+import { computed } from 'vue';
 import { useRoute } from 'vue-router';
 
 export default {

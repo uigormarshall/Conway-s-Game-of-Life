@@ -41,11 +41,10 @@ export default {
    this.gameOfLife.run();
  
   },
-  beforeRouteLeave(to, from, next) {
+  beforeRouteLeave() {
     // Lógica para desabilitar o componente ao sair da rota
     this.gameOfLife.stop();
     this.show = false;
-    next();
   },
 };
 </script>
